@@ -1,0 +1,47 @@
+// Brandon Kornmueller
+//ITT 310
+//October 24 2021
+
+#include <stdio.h>
+
+int main() //Creating defined functions, question the user what they want to pick
+{
+	char operator;
+	double first, second;
+	printf("Enter the operator that you want to use - (+,-,*,/) : ");
+	scanf_s("%c", &operator);
+
+
+	//Person picks two numbers and the system scans them
+	printf("Enter the two numbers one by one : ");
+	scanf_s("%lf %lf", &first, &second);
+
+
+	//All operators a person can use
+	switch (operator)
+	{
+	case '+':
+		printf(" % lf + % lf = % lf", first, second, (first + second));
+		break;
+	case '-':
+		printf(" % lf - % lf = % lf", first, second, (first - second));
+		break;
+	case '*':
+		printf(" % lf * % lf = % lf", first, second, (first * second));
+		break;
+	case '/':
+		printf(" % lf / % lf = % lf", first, second, (first / second));
+		if (second != 0.0)
+			printf(" % lf + % lf = % lf", first, second, (first + second));
+		else
+			printf("Divide by zero situation");
+		break;
+
+		//Operatos can only be certain ones in the system
+	default:
+		printf("Invalid Operator");
+
+	}
+
+}
+   
